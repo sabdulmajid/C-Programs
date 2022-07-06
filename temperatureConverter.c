@@ -4,11 +4,11 @@
 
 
 int main (void) {
-    float faren, celc;
-    printf("Enter the Farenheit temperature: ");
-    scanf("%f", &faren);
+    float fahren, celc;
+    printf("Enter the Fahrenheit temperature: ");
+    scanf("%f", &fahren);
 
-    celc = (faren - FREEZING_POINT) * SCALE_FACTOR;
+    celc = (fahren - FREEZING_POINT) * SCALE_FACTOR;
 
     printf("Celsius temperature: %.1f", celc);
 }
