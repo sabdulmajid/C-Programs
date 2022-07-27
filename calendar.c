@@ -44,3 +44,24 @@ void add_days_to_date(int *mm, int *dd, int *yy, int days_left_to_add) {
     }
   }
 }
+
+int main() {
+/* Previous test case code - for initial function testing
+  int year;
+  printf("Input any year: ");
+  scanf("%d", &year);
+  if (is_leap_year(year)) {
+    printf("Leap year!\n");
+  } else if (is_leap_year(year) == false) {
+    printf("Not leap year!\n");
+  } else {
+    printf("Invalid input/function!\n");
+  }
+*/
+  int mm, dd, yy, days_left_to_add;
+  printf("Enter a date in the format 'mm dd yy numberOfDaysToAdd': ");
+  scanf("%d %d %d %d", &mm, &dd, &yy, &days_left_to_add);
+  add_days_to_date(&mm, &dd, &yy, days_left_to_add);
+  printf("%d %d %d\n", mm, dd, yy);
+
+}
