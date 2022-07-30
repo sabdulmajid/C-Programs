@@ -38,7 +38,25 @@ char printCongratulation(struct RaceCar raceCar) {
 
 // Logic functions section
 int calculateTimeToCompleteLap(void) {
-  
+  int speed, acceleration, nerves;
+  speed = (rand() % 3 + 1);
+  acceleration = (rand() % 3 + 1);
+  nerves = (rand() % 3 + 1);
+  return (speed + acceleration + nerves);
+};
+
+void updateRaceCar(struct RaceCar* raceCar) {
+  raceCar -> totalLapTime = calculateTimeToCompleteLap(); 
+};
+
+void updateFirstPlace(struct Race* race, struct RaceCar* raceCar1, struct RaceCar* raceCar2) {
+  if (raceCar1 -> totalLapTime <= raceCar2 -> totalLapTime) {
+    race -> firstPlaceDriverName = raceCar1 -> driverName;
+    race -> firstPlaceRaceCarColor = raceCar1 -> raceCarColor;
+  } else {
+      race -> firstPlaceDriverName = raceCar2 -> driverName;
+      race -> firstPlaceRaceCarColor = raceCar2 -> raceCarColor;
+  }
 };
 
 int main() {
