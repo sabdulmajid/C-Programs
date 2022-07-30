@@ -71,6 +71,9 @@ void startRace(struct RaceCar* raceCar1, struct RaceCar* raceCar2) {
 
 int main() {
 	srand(time(0));
+  struct RaceCar raceCar1 = {"Shaikh Ayman Abdul-Majid", "magenta", 0};
+  struct RaceCar raceCar2 = {"Jabir Mustahid", "cyan", 0};
   printIntro();
   printCountDown();
+  startRace(&raceCar1, &raceCar2);
 };
